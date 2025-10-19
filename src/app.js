@@ -21,10 +21,13 @@ app.use(
 //setting up the routes
 
 import healthCheckRouter from "./routes/healthcheck.routes.js";
-
+import authRouter from "./routes/auth.routes.js";
 
 app.use("/api/v1/healthcheck", healthCheckRouter);
           //home route    +   //specific route
+
+app.use("/api/v1/auth", authRouter);
+        //home route + //specific route
 
 app.get("/",(req,res)=>{
   res.send("Hello World!");
